@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stileditor/editorstyle.css">
+    <title>Document</title>
+</head>
+
+<body>
+<header>
+<h2>Code editor</h2>
+</header>
+
+<div>
+<div class="editor">
+<div id="areaholder1" class="htmlarea">
+    <h3 id="fst">HTML</h3>
+<textarea id="html-code"></textarea>
+</div>
+<div id="areaholder2" class="cssarea">
+    <h3 id="snd">CSS</h3>
+<textarea id="css-code"></textarea>
+</div>
+<div id="areaholder3" class="jsarea">
+    <h3 id="trd">JS</h3>
+<textarea id="js-code"></textarea>
+</div>
+
+</div>
+<div class="frame">
+<iframe id="output"></iframe>
+
+</div>
+
+<script type="text/javascript">
+function run(){
+let htmlCode=document.querySelector(".editor #html-code").value;
+let cssCode="<style>"+document.querySelector(".editor #css-code").value+"</style>";
+let jsCode=document.querySelector(".editor #js-code").value;
+let output=document.querySelector(".frame #output");
+// console.log(htmlCode, cssCode, jsCode, output);
+
+output.contentDocument.body.innerHTML=htmlCode+cssCode;
+output.contentWindow.eval(jsCode);
+}
+document.querySelector(".editor #html-code").addEventListener("keyup",run);
+document.querySelector(".editor #css-code").addEventListener("keyup",run);
+document.querySelector(".editor #js-code").addEventListener("keyup",run);
+
+// https://stackoverflow.com/questions/45086967/adding-and-removing-a-content-with-the-same-button-javascript
+
+</script>
+
+</div>
+    
+
+
+<!-- <script>
+    function myFunction(x) {
+      if (x.matches) { // If media query matches
+        document.getElementById("html-code").innerHTML="<body>"+"\n\n\n"+"  <style>"+"\n\n\n\n\n\n"+"  </style>"
+            + "\n\n\n" + "<script>"+ "\n\n\n" + "</"+"script>" +"\n\n\n" + "</body>" ;
+
+                document.getElementById("fst").innerHTML="html+css+js";
+      } 
+      else {
+        document.getElementById("html-code").innerHTML="<body>" +"\n\n\n\n\n\n\n\n\n\n\n\n" + "</body>";
+      }
+    }
+    
+    var x = window.matchMedia("(max-width: 768px)")
+    myFunction(x) // Call listener function at run time
+    x.addListener(myFunction) // Attach listener function on state changes
+    </script> -->
+<script src="./editorjs/editorscript.js"></script>
+
+</body>
+</html>

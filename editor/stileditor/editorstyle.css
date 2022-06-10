@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+    background-color: grey;
+}
+
+body{
+      margin: 0;  
+}
+
+header{
+    background-color: gray;
+    padding: 2px;
+    top: 0;
+}
+
+.editor{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+
+textarea{
+    width: 32vw;
+    min-height: 43vh;
+    resize: vertical;
+    background-color: #d9d7d3;
+}
+
+
+#output{
+    width: 100%;
+    min-height:550px;
+    background-color: #d9d7d3;
+}
+
+#areaholder1, #areaholder2 ,#areaholder3{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#areaholder1 #fst{
+    background-color: red;
+    margin: 0;
+}
+#areaholder2 #snd{
+    background-color: blue;
+    margin: 0;
+}
+#areaholder3 #trd{
+    background-color: yellow;
+    margin: 0;
+}
+
+textarea::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  textarea::-webkit-scrollbar-track {
+    background: inherit; 
+  }
+  
+  textarea::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius:88px;
+  }
+
+@media only screen and (max-width:768px) {
+#areaholder2 ,#areaholder3{
+    display: none;
+}
+
+#areaholder1 textarea{
+    width: 97vw;
+}
+#areaholder1 #fst{
+    background-image:linear-gradient(90deg, red 14%,  blue,yellow 88%) ;
+}
+
+}

@@ -1,0 +1,234 @@
+
+*{
+    box-sizing: border-box;
+}
+
+.brick {
+    width: 378px;
+    height: 461px;
+    background-image: radial-gradient( closest-side at 56% 78%, #000000, gainsboro);
+    margin: 46px 15px 0 auto;
+}
+
+#firsttheme .front{
+    background-color: #cb3915;
+}
+#firsttheme .top{
+    background-color: gold;
+}
+
+#firsttheme .left{
+    background-color: blue;
+}
+
+#firsttheme .side{
+    left: 83px;
+    top: 83px;
+    position: absolute;
+    height: 125px;
+    width: 125px;
+    border:solid 1px black;
+}
+
+#firsttheme .side img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0px solid purple;
+}
+
+
+#firsttheme .front{transform:translateZ(135px);}
+#firsttheme .left{transform: rotateY(-90deg) translateZ(135px);}
+#firsttheme .top{transform: rotateX(90deg) translateZ(135px);}
+
+
+
+#firsttheme .side{
+    left: 83px;
+    top: 83px;
+    position: absolute;
+    height: 270px;
+    width: 270px;
+    
+}
+
+#firsttheme .cube {
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: spin1 5s infinite linear;
+  }
+
+  #firsttheme .cube {
+    transform-style: preserve-3d;
+    transform: rotateX(345deg) rotateY(45deg);
+}
+
+
+@keyframes spin1 {
+    0% {
+        transform: rotateX(350deg) rotateY(45deg);
+    }
+    25% {
+      transform: rotateX(345deg) rotateY(47deg);
+    }
+
+    50% {
+        transform: rotateX(345deg) rotateY(43deg);
+      }
+
+    100% {
+        transform: rotateX(350deg) rotateY(45deg);
+    }
+
+  }
+
+
+
+
+.bluebrick{
+    /* display: inline-block; */
+    width: 300px;
+    height: 300px;
+    background-image: radial-gradient( closest-side at 50% 85%, #9b9595, gainsboro);
+    float: left;
+    margin: 0 9px 6px -41px;
+}
+
+.redbrick{
+    /* display: inline-block; */
+    width: 300px;
+    height: 300px;
+    background-image: radial-gradient( closest-side at 50% 85%, #a76262,gainsboro);
+    float: left;
+    margin: 0 9px 6px -41px;
+}
+
+.yellowbrick{
+    /* display: inline-block; */
+    width: 300px;
+    height: 300px;
+    background-image: radial-gradient( closest-side at 50% 85%, #adad39,gainsboro);
+    float: left;
+    margin: 0 9px 6px -41px;
+}
+
+.perspektiva{
+    perspective: 1000px;
+}
+
+.side{
+    left: 83px;
+    top: 83px;
+    position: absolute;
+    height: 125px;
+    width: 125px;
+    
+}
+#redb{
+    background: #ce4522;
+}
+
+#ylwb{
+background: #d1911f;
+}
+
+#blub{
+    background: #373dc5;
+    }
+.side img{
+    display: block;
+    width: 125px;
+    height: 125px;
+    border: 0px solid purple;
+}
+
+.cube{
+transform-style: preserve-3d;
+transform: rotateX(350deg) rotateY(33deg);
+}
+
+.front{transform:translateZ(62.5px);}
+.back {transform: rotateY(-180deg) translateZ(62.5px);}
+.left{transform: rotateY(-90deg) translateZ(62.5px);}
+.right{transform: rotateY(90deg) translateZ(62.5px);}
+.top{transform: rotateX(90deg) translateZ(62.5px);}
+.bottom{transform: rotateX(-90deg) translateZ(62.5px);}
+
+
+@keyframes spin {
+    0% {
+        transform: rotateX(342deg) rotateY(0deg);
+    }
+    50% {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+    100% {
+        transform: rotateX(342deg) rotateY(0deg);
+    }
+
+  }
+  .cube {
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: spin 25s infinite linear;
+  }
+
+
+  @media only screen and (max-width:768px) {
+
+    #firsttheme .side{
+        height: 20vw;
+        width: 20vw;
+    }
+
+    #firsttheme .front{transform:translateZ(10vw);}
+    #firsttheme .left{transform: rotateY(-90deg) translateZ(10vw);}
+    #firsttheme .top{transform: rotateX(90deg) translateZ(10vw);}
+
+    .brick {
+        width: 46%;
+        height: 42vw;
+        background-image: none;
+        float: right;
+        margin: 21px 20px 0 0;
+    }
+
+
+
+  .redbrick{
+    float: none;
+    margin: 0 auto;
+  }
+  
+  .bluebrick{
+    float: none;
+    margin: 0 auto;
+  }
+
+  .yellowbrick{
+    float: none;
+    margin: 0 auto;
+  }
+
+
+}
+
+@media only screen and (max-width:350px) {
+    .redbrick{
+        margin: 0 9px 6px -41px;
+      }
+      
+      .bluebrick{
+        margin: 0 9px 6px -41px;
+      }
+    
+      .yellowbrick{
+        margin: 0 9px 6px -41px;
+      }
+
+}
